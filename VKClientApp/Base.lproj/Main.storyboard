@@ -34,7 +34,7 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="pressLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ux-bb-doG"/>
-                                                    <segue destination="Cfg-tU-sfY" kind="show" identifier="toTabBarController" id="t3Q-Hd-0HY"/>
+                                                    <segue destination="Cfg-tU-sfY" kind="show" identifier="toTabBarController" id="Egc-WY-L1Q"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="knO-qo-Fnw">
@@ -117,48 +117,101 @@
             </objects>
             <point key="canvasLocation" x="-1.4492753623188408" y="-359.59821428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Groups-->
         <scene sceneID="gMI-Zu-bF6">
             <objects>
-                <viewController id="eiM-qn-Ked" sceneMemberID="viewController">
+                <viewController id="eiM-qn-Ked" customClass="GroupsViewController" customModule="VKClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4R3-VR-L6l">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hcV-CX-7GQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="b6Q-HZ-8w3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstItem="hcV-CX-7GQ" firstAttribute="leading" secondItem="b6Q-HZ-8w3" secondAttribute="leading" id="69s-HT-DRM"/>
+                            <constraint firstItem="b6Q-HZ-8w3" firstAttribute="bottom" secondItem="hcV-CX-7GQ" secondAttribute="bottom" id="IdU-ku-GSU"/>
+                            <constraint firstItem="b6Q-HZ-8w3" firstAttribute="trailing" secondItem="hcV-CX-7GQ" secondAttribute="trailing" id="lyu-dc-2o6"/>
+                            <constraint firstItem="hcV-CX-7GQ" firstAttribute="top" secondItem="b6Q-HZ-8w3" secondAttribute="top" id="p9e-Qr-MTi"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RsE-Mv-uJM"/>
+                    <navigationItem key="navigationItem" title="Groups" id="RsE-Mv-uJM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Sgz-0Q-BkE">
+                            <connections>
+                                <segue destination="jVT-qS-FWO" kind="show" id="7yO-h7-aPP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="hcV-CX-7GQ" id="x88-gD-A9w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IDV-l1-QX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2374" y="3"/>
         </scene>
-        <!--View Controller-->
+        <!--All Groups View Controller-->
         <scene sceneID="Bxh-EB-Zb1">
             <objects>
-                <viewController id="jVT-qS-FWO" sceneMemberID="viewController">
+                <viewController id="jVT-qS-FWO" customClass="AllGroupsViewController" customModule="VKClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZPL-b3-cHx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="30s-ny-iLj">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JeU-PJ-7Ah"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="JeU-PJ-7Ah" firstAttribute="trailing" secondItem="30s-ny-iLj" secondAttribute="trailing" id="aLs-cD-s7j"/>
+                            <constraint firstItem="JeU-PJ-7Ah" firstAttribute="bottom" secondItem="30s-ny-iLj" secondAttribute="bottom" id="njf-S3-0me"/>
+                            <constraint firstItem="30s-ny-iLj" firstAttribute="top" secondItem="JeU-PJ-7Ah" secondAttribute="top" id="uOa-Af-v24"/>
+                            <constraint firstItem="30s-ny-iLj" firstAttribute="leading" secondItem="JeU-PJ-7Ah" secondAttribute="leading" id="xAC-XC-tCk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wBy-s5-PYh"/>
+                    <connections>
+                        <outlet property="tableView" destination="30s-ny-iLj" id="LWA-kE-YCV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uXM-R0-ayr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3103" y="3"/>
         </scene>
-        <!--View Controller-->
+        <!--Friends-->
         <scene sceneID="OAU-EL-bbc">
             <objects>
-                <viewController id="UjC-Z6-VT5" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="UjC-Z6-VT5" customClass="FriendsViewController" customModule="VKClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gBS-8Y-uk5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qPr-eW-avU">
+                                <rect key="frame" x="0.0" y="56" width="414" height="757"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="07m-qO-HuM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="07m-qO-HuM" firstAttribute="bottom" secondItem="qPr-eW-avU" secondAttribute="bottom" id="3DQ-RO-DjH"/>
+                            <constraint firstItem="07m-qO-HuM" firstAttribute="trailing" secondItem="qPr-eW-avU" secondAttribute="trailing" id="VIl-zi-0hf"/>
+                            <constraint firstItem="qPr-eW-avU" firstAttribute="top" secondItem="07m-qO-HuM" secondAttribute="top" id="Yfk-Ea-QpO"/>
+                            <constraint firstItem="qPr-eW-avU" firstAttribute="leading" secondItem="07m-qO-HuM" secondAttribute="leading" id="yf4-jh-BuK"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3UF-AX-QVF"/>
+                    <navigationItem key="navigationItem" title="Friends" id="3UF-AX-QVF"/>
+                    <connections>
+                        <outlet property="tableview" destination="qPr-eW-avU" id="NWg-pu-31H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y41-Jw-GGf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,8 +225,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="DsR-b1-MzQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="q97-UK-zEa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNv-Af-xy2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -246,8 +300,20 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

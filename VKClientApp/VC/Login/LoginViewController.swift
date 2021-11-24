@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
-    let toOrangeSegue = "fromLoginToOrange"
+    let toOrangeSegue = "toTabBarController"
     
     override func viewDidLoad() {
         super.viewDidLoad()
