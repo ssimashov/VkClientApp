@@ -37,8 +37,8 @@ class FriendsViewController: UIViewController {
 extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func fillFriendsArray() {
-        let friend1 = Friend(name: "Lavrov", avatar: "1", fotoArray: [""])
-        let friend2 = Friend(name: "Putin", avatar: "3", fotoArray: [""])
+        let friend1 = Friend(name: "Lavrov", avatar: "1", fotoArray: ["2"])
+        let friend2 = Friend(name: "Putin", avatar: "3", fotoArray: ["4"])
         friendsArray.append(friend1)
         friendsArray.append(friend2)
     }

@@ -14,6 +14,7 @@
 		F61AE2C1274D671D00F496FA /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61AE2C0274D671D00F496FA /* FriendsViewController.swift */; };
 		F61AE2C9274E9B7100F496FA /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61AE2C8274E9B7100F496FA /* GroupsViewController.swift */; };
 		F61AE2CC274E9C2200F496FA /* AllGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61AE2CB274E9C2200F496FA /* AllGroupsViewController.swift */; };
+		F6E52E682757EA590026D7AD /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E52E672757EA590026D7AD /* GalleryViewController.swift */; };
 		F6F924B0273EE4C000D674F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F924AF273EE4C000D674F8 /* AppDelegate.swift */; };
 		F6F924B2273EE4C000D674F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F924B1273EE4C000D674F8 /* SceneDelegate.swift */; };
 		F6F924B7273EE4C000D674F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6F924B5273EE4C000D674F8 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		F61AE2C0274D671D00F496FA /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		F61AE2C8274E9B7100F496FA /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		F61AE2CB274E9C2200F496FA /* AllGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsViewController.swift; sourceTree = "<group>"; };
+		F6E52E672757EA590026D7AD /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		F6F924AC273EE4C000D674F8 /* VKClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKClientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F924AF273EE4C000D674F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6F924B1273EE4C000D674F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		F6334D62274D597D00EE301D /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				F6E52E662757EA3C0026D7AD /* GalleryViewController */,
 				F61AE2CA274E9BFF00F496FA /* AllGroups */,
 				F6334D66274D5AFB00EE301D /* Cell */,
 				F6334D65274D5AE500EE301D /* Groups */,
@@ -111,6 +114,14 @@
 				F61AE2BD274D5E9000F496FA /* CustomTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		F6E52E662757EA3C0026D7AD /* GalleryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6E52E672757EA590026D7AD /* GalleryViewController.swift */,
+			);
+			path = GalleryViewController;
 			sourceTree = "<group>";
 		};
 		F6F924A3273EE4C000D674F8 = {
@@ -223,6 +234,7 @@
 				F61AE2BE274D5E9000F496FA /* CustomTableViewCell.swift in Sources */,
 				F61AE2BB274D5C5800F496FA /* Group.swift in Sources */,
 				F61AE2C9274E9B7100F496FA /* GroupsViewController.swift in Sources */,
+				F6E52E682757EA590026D7AD /* GalleryViewController.swift in Sources */,
 				F61AE2B9274D5C4B00F496FA /* Friend.swift in Sources */,
 				F6F924B2273EE4C000D674F8 /* SceneDelegate.swift in Sources */,
 			);

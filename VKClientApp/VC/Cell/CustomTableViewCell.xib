@@ -12,31 +12,30 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="189" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="VKClientApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="427" height="189"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="CustomTableViewCell" customModule="VKClientApp" customModuleProvider="target">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="CustomTableViewCell" customModule="VKClientApp" customModuleProvider="target">
                 <rect key="frame" x="0.0" y="0.0" width="427" height="189"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvE-FC-Kdj">
-                        <rect key="frame" x="189" y="84" width="230" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvE-FC-Kdj">
+                        <rect key="frame" x="166" y="65" width="68" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nET-eC-2QY">
-                        <rect key="frame" x="8" y="8" width="173" height="173"/>
+                        <rect key="frame" x="8" y="0.0" width="150" height="150"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="nET-eC-2QY" secondAttribute="height" multiplier="1:1" id="Sed-Hq-9wa"/>
+                            <constraint firstAttribute="height" constant="150" id="9eV-AM-ge2"/>
+                            <constraint firstAttribute="width" constant="150" id="d5n-dH-hOx"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="PvE-FC-Kdj" secondAttribute="trailing" constant="8" id="2Wz-4v-7sw"/>
-                    <constraint firstItem="nET-eC-2QY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="61j-E7-I8m"/>
-                    <constraint firstItem="PvE-FC-Kdj" firstAttribute="leading" secondItem="nET-eC-2QY" secondAttribute="trailing" constant="8" id="Gqh-zr-ptB"/>
-                    <constraint firstItem="nET-eC-2QY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="IHv-WY-boZ"/>
-                    <constraint firstItem="PvE-FC-Kdj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="U1e-ha-6PD"/>
-                    <constraint firstItem="nET-eC-2QY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="XpD-E7-loA"/>
-                    <constraint firstItem="nET-eC-2QY" firstAttribute="centerY" secondItem="PvE-FC-Kdj" secondAttribute="centerY" id="ngU-Pk-zKh"/>
+                    <constraint firstAttribute="bottom" secondItem="nET-eC-2QY" secondAttribute="bottom" id="0CC-cb-sxX"/>
+                    <constraint firstItem="nET-eC-2QY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5GP-Pj-4Ch"/>
+                    <constraint firstItem="nET-eC-2QY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="93g-uX-EsP"/>
+                    <constraint firstItem="nET-eC-2QY" firstAttribute="centerY" secondItem="PvE-FC-Kdj" secondAttribute="centerY" id="D2t-2I-KZD"/>
+                    <constraint firstItem="PvE-FC-Kdj" firstAttribute="leading" secondItem="nET-eC-2QY" secondAttribute="trailing" constant="8" id="sUt-48-C6r"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

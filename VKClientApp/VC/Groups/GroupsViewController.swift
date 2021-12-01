@@ -14,7 +14,7 @@ class GroupsViewController: UIViewController {
     var sourceArray = ["group test"]
     
     let customCellReuseIdentifier = "customCellReuseIdentifier"
-    let heightCustomTableViewCell:CGFloat = 200
+    let heightCustomTableViewCell:CGFloat = 150
     
     override func viewDidLoad() {
         super.viewDidLoad()

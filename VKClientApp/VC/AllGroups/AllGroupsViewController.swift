@@ -14,7 +14,7 @@ class AllGroupsViewController: UIViewController {
     var sourceArray = [Group]()
     
     let customCellReuseIdentifier = "customCellReuseIdentifier"
-    let heightCustomTableViewCell:CGFloat = 200
+    let heightCustomTableViewCell:CGFloat = 1500
     
     
     
