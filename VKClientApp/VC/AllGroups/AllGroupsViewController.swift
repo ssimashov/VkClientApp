@@ -14,7 +14,7 @@ class AllGroupsViewController: UIViewController {
     var sourceArray = [Group]()
     
     let customCellReuseIdentifier = "customCellReuseIdentifier"
-    let heightCustomTableViewCell:CGFloat = 1500
+    let heightCustomTableViewCell:CGFloat = 150
     
     
     
@@ -22,9 +22,11 @@ class AllGroupsViewController: UIViewController {
     func groupFillData() {
         let group1 = Group(name: "Ministry", avatar: "avatar1")
         let group2 = Group(name: "LOVE", avatar: "avatar2")
+        let group3 = Group(name: "paradise", avatar: "avatar3")
     
         sourceArray.append(group1)
         sourceArray.append(group2)
+        sourceArray.append(group3)
         
     }
     
@@ -58,5 +60,11 @@ extension AllGroupsViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return heightCustomTableViewCell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(sourceArray[indexPath.row].name)
+        NotificationCenter.default.post(name: NSNotification.Name("groupSelectedNotification"), object: sourceArray[indexPath.row])
     }
 }

@@ -16,26 +16,27 @@
                 <rect key="frame" x="0.0" y="0.0" width="427" height="189"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvE-FC-Kdj">
-                        <rect key="frame" x="166" y="65" width="68" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvE-FC-Kdj">
+                        <rect key="frame" x="140" y="55" width="267" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nET-eC-2QY">
-                        <rect key="frame" x="8" y="0.0" width="150" height="150"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nET-eC-2QY">
+                        <rect key="frame" x="20" y="20" width="100" height="100"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="150" id="9eV-AM-ge2"/>
-                            <constraint firstAttribute="width" constant="150" id="d5n-dH-hOx"/>
+                            <constraint firstAttribute="height" constant="100" id="HTM-eT-g7l"/>
+                            <constraint firstAttribute="width" constant="100" id="JoN-l3-YBf"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="nET-eC-2QY" secondAttribute="bottom" id="0CC-cb-sxX"/>
-                    <constraint firstItem="nET-eC-2QY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5GP-Pj-4Ch"/>
-                    <constraint firstItem="nET-eC-2QY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="93g-uX-EsP"/>
-                    <constraint firstItem="nET-eC-2QY" firstAttribute="centerY" secondItem="PvE-FC-Kdj" secondAttribute="centerY" id="D2t-2I-KZD"/>
-                    <constraint firstItem="PvE-FC-Kdj" firstAttribute="leading" secondItem="nET-eC-2QY" secondAttribute="trailing" constant="8" id="sUt-48-C6r"/>
+                    <constraint firstItem="nET-eC-2QY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="Jrt-8g-mFK"/>
+                    <constraint firstItem="nET-eC-2QY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="NsZ-Lg-1Ri"/>
+                    <constraint firstItem="PvE-FC-Kdj" firstAttribute="leading" secondItem="nET-eC-2QY" secondAttribute="trailing" constant="20" id="adO-cn-MgO"/>
+                    <constraint firstItem="nET-eC-2QY" firstAttribute="centerY" secondItem="PvE-FC-Kdj" secondAttribute="centerY" id="cb1-a2-8D5"/>
+                    <constraint firstAttribute="bottom" secondItem="nET-eC-2QY" secondAttribute="bottom" constant="20" id="tvV-wa-uS9"/>
+                    <constraint firstAttribute="trailing" secondItem="PvE-FC-Kdj" secondAttribute="trailing" priority="999" constant="20" id="w7a-H3-uUJ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

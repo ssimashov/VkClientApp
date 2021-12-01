@@ -17,7 +17,7 @@ class FriendsViewController: UIViewController {
     
     let customCellReuseIdentifier = "customCellReuseIdentifier"
     let heightCustomTableViewCell:CGFloat = 150
-
+    let toGallerySegue = "toCollectionViewSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,5 +62,21 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
      
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return heightCustomTableViewCell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == toGallerySegue,
+           let friendsFotoArray = sender as? [String],
+           let destination = segue.destination as? GalleryViewController {
+            destination.sourceArray = friendsFotoArray
+        }
+    }
+    
+    
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let friendsFotoArray = friendsArray[indexPath.item].fotoArray {
+            performSegue(withIdentifier: toGallerySegue, sender: friendsFotoArray)
+        }
     }
 }
