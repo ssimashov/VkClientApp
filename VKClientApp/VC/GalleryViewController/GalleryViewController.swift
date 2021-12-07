@@ -14,6 +14,8 @@ class GalleryViewController: UIViewController {
     var sourceArray = ["2","2","2","4","2"]
    
     let reuseIdentifier = "reuseIdentifier"
+    let moveToPhoto = "moveToPhoto"
+    
     
     
     override func viewDidLoad() {
@@ -47,18 +49,20 @@ extension GalleryViewController: UICollectionViewDataSource {
 
 extension GalleryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("index \(String(indexPath.item))")
-    }
+        
+        performSegue(withIdentifier: moveToPhoto, sender: nil)
 }
+        
+        
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard segue.identifier == moveToPhoto else {return}
+//        let cellPhoto = sender as! CustomCollectionViewCell
+//        let image = cellPhoto.imageView.image
+//        let photoVC: PhotoViewController = segue.destination as! PhotoViewController
+//        photoVC.photo = image
+//    }
 
-
-
-
-
-
-
-
-
+}
 
 
 

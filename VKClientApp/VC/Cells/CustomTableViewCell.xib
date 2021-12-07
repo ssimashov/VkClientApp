@@ -12,30 +12,29 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="138" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="VKClientApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="315" height="138"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="315" height="138"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8YC-9B-S8i">
-                        <rect key="frame" x="140" y="56.5" width="56" height="27"/>
+                        <rect key="frame" x="150" y="55.5" width="56" height="27"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HPv-Zp-kms">
-                        <rect key="frame" x="20" y="20" width="100" height="100"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HPv-Zp-kms">
+                        <rect key="frame" x="8" y="8" width="122" height="122"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="DxN-KP-8vs"/>
-                            <constraint firstAttribute="height" constant="100" id="lYB-Xo-3n8"/>
+                            <constraint firstAttribute="width" secondItem="HPv-Zp-kms" secondAttribute="height" multiplier="1:1" id="zj3-Hg-dya"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="HPv-Zp-kms" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="2Wh-fb-hPP"/>
+                    <constraint firstItem="HPv-Zp-kms" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="2Wh-fb-hPP"/>
                     <constraint firstItem="8YC-9B-S8i" firstAttribute="centerY" secondItem="HPv-Zp-kms" secondAttribute="centerY" id="8H6-Sx-nd5"/>
                     <constraint firstItem="8YC-9B-S8i" firstAttribute="leading" secondItem="HPv-Zp-kms" secondAttribute="trailing" constant="20" id="UMs-Za-KVK"/>
-                    <constraint firstItem="HPv-Zp-kms" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="e8p-67-eoi"/>
-                    <constraint firstAttribute="bottom" secondItem="HPv-Zp-kms" secondAttribute="bottom" constant="20" id="r0t-Ag-nJu"/>
+                    <constraint firstItem="HPv-Zp-kms" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="e8p-67-eoi"/>
+                    <constraint firstAttribute="bottom" secondItem="HPv-Zp-kms" secondAttribute="bottom" constant="8" id="r0t-Ag-nJu"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

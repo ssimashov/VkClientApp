@@ -12,7 +12,6 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var scrollView: UIScrollView!
     
     let toOrangeSegue = "toTabBarController"
@@ -27,21 +26,14 @@ class LoginViewController: UIViewController {
         self.view.addGestureRecognizer(recognizer)
     }
     
-    
-    
-    
+
     @objc func onTap(_ recognizer: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
     
-    
-    
-    
-    
     @objc func keyboardDidShow(_ notification: Notification) {
         let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
         guard let keyboardHeight = keyboardSize?.height else { return }
-
         let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight + 100, right: 0)
         scrollView.contentInset = contentInsets
         scrollView.scrollIndicatorInsets = contentInsets
@@ -54,14 +46,9 @@ class LoginViewController: UIViewController {
      }
     
     
-    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-    
-    
-    
-    
     
     
     @IBAction func pressLoginButton(_ sender: Any) {
