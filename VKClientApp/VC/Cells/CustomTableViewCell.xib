@@ -22,7 +22,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HPv-Zp-kms">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HPv-Zp-kms">
                         <rect key="frame" x="8" y="8" width="122" height="122"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="HPv-Zp-kms" secondAttribute="height" multiplier="1:1" id="zj3-Hg-dya"/>
