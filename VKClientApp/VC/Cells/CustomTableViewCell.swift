@@ -14,6 +14,8 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var backView: UIView!
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         avatarImageView.image = nil
@@ -21,6 +23,17 @@ class CustomTableViewCell: UITableViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
+        avatarImageView.layer.cornerRadius = 60
+        avatarImageView.layer.borderWidth = 2
+        avatarImageView.layer.borderColor = UIColor.gray.cgColor
+        backView.layer.cornerRadius = 60
+        backView.layer.shadowColor = UIColor.black.cgColor
+        backView.layer.shadowOpacity = 0.7
+        backView.layer.shadowRadius = 15
+        backView.layer.shadowOffset = CGSize.zero
+        
     }
 
     func configure(image: UIImage?, text: String?) {

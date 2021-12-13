@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,33 +17,52 @@
                 <rect key="frame" x="0.0" y="0.0" width="315" height="138"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q67-qO-yxQ">
+                        <rect key="frame" x="10" y="9" width="120" height="120"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HPv-Zp-kms">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="EDk-27-Swh"/>
+                                    <constraint firstAttribute="width" constant="120" id="vEi-xk-gvY"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HPv-Zp-kms" firstAttribute="top" secondItem="Q67-qO-yxQ" secondAttribute="top" id="Zcv-XG-4lA"/>
+                            <constraint firstItem="HPv-Zp-kms" firstAttribute="leading" secondItem="Q67-qO-yxQ" secondAttribute="leading" id="avG-xb-8x3"/>
+                            <constraint firstAttribute="trailing" secondItem="HPv-Zp-kms" secondAttribute="trailing" id="eqP-oG-cIv"/>
+                            <constraint firstAttribute="bottom" secondItem="HPv-Zp-kms" secondAttribute="bottom" id="gTg-2z-Rs0"/>
+                        </constraints>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8YC-9B-S8i">
-                        <rect key="frame" x="150" y="55.5" width="56" height="27"/>
+                        <rect key="frame" x="150" y="56" width="145" height="26.5"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HPv-Zp-kms">
-                        <rect key="frame" x="8" y="8" width="122" height="122"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="HPv-Zp-kms" secondAttribute="height" multiplier="1:1" id="zj3-Hg-dya"/>
-                        </constraints>
-                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="HPv-Zp-kms" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="2Wh-fb-hPP"/>
-                    <constraint firstItem="8YC-9B-S8i" firstAttribute="centerY" secondItem="HPv-Zp-kms" secondAttribute="centerY" id="8H6-Sx-nd5"/>
-                    <constraint firstItem="8YC-9B-S8i" firstAttribute="leading" secondItem="HPv-Zp-kms" secondAttribute="trailing" constant="20" id="UMs-Za-KVK"/>
-                    <constraint firstItem="HPv-Zp-kms" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="e8p-67-eoi"/>
-                    <constraint firstAttribute="bottom" secondItem="HPv-Zp-kms" secondAttribute="bottom" constant="8" id="r0t-Ag-nJu"/>
+                    <constraint firstItem="8YC-9B-S8i" firstAttribute="centerY" secondItem="HPv-Zp-kms" secondAttribute="centerY" id="35d-j1-sjq"/>
+                    <constraint firstItem="Q67-qO-yxQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Dj4-ne-4px"/>
+                    <constraint firstAttribute="trailing" secondItem="8YC-9B-S8i" secondAttribute="trailing" constant="20" id="K7C-1e-rHI"/>
+                    <constraint firstItem="Q67-qO-yxQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Zbs-Ha-gjb"/>
+                    <constraint firstItem="8YC-9B-S8i" firstAttribute="leading" secondItem="HPv-Zp-kms" secondAttribute="trailing" constant="20" id="qSq-9B-ljB"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="avatarImageView" destination="HPv-Zp-kms" id="jig-LN-18Y"/>
+                <outlet property="backView" destination="Q67-qO-yxQ" id="Et5-Zs-DiT"/>
                 <outlet property="nameLabel" destination="8YC-9B-S8i" id="von-Hc-eQ7"/>
             </connections>
             <point key="canvasLocation" x="126.81159420289856" y="83.035714285714278"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

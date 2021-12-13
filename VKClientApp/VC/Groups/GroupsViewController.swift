@@ -14,7 +14,7 @@ class GroupsViewController: UIViewController {
     var sourceArray = [Group]()
     
     let customCellReuseIdentifier = "customCellReuseIdentifier"
-    let heightCustomTableViewCell:CGFloat = 100
+    let heightCustomTableViewCell:CGFloat = 150
     
     let variable1 = 1
     
@@ -30,7 +30,7 @@ class GroupsViewController: UIViewController {
     @objc func addGroup(_ notification: Notification) {
         guard let groupObject = notification.object as? Group else {return}
         
-        print(groupObject.name)
+//        print(groupObject.name)
     
         if sourceArray.contains(where: { sourceGroup in
             sourceGroup.name == groupObject.name

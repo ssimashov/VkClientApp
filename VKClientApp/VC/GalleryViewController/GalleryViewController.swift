@@ -48,19 +48,22 @@ extension GalleryViewController: UICollectionViewDataSource {
 
 
 extension GalleryViewController: UICollectionViewDelegate {
+   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == moveToPhoto,
+        let photo = sender as? UIImage,
+           let destination = segue.destination as? PhotoViewController {
+            destination.photo = photo
+           
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        performSegue(withIdentifier: moveToPhoto, sender: nil)
+        if let photo = UIImage(named: sourceArray[indexPath.item]) {
+        performSegue(withIdentifier: moveToPhoto, sender: photo)
+        }
 }
-        
-        
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard segue.identifier == moveToPhoto else {return}
-//        let cellPhoto = sender as! CustomCollectionViewCell
-//        let image = cellPhoto.imageView.image
-//        let photoVC: PhotoViewController = segue.destination as! PhotoViewController
-//        photoVC.photo = image
-//    }
+    
 
 }
 

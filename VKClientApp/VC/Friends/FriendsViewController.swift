@@ -41,7 +41,7 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
         let friend2 = Friend(name: "Сергей Лавров", avatar: "Lavrov", fotoArray: ["Lavrov1", "Lavrov2", "Lavrov3", "Lavrov4", "Lavrov5"])
         let friend3 = Friend(name: "Владимир Жириновский", avatar: "Zhirik", fotoArray: ["Zhirik1", "Zhirik2", "Zhirik3", "Zhirik4", "Zhirik5"])
         let friend4 = Friend(name: "Дмитрий Медведев", avatar: "Medvedev", fotoArray: ["Medvedev1", "Medvedev2", "Medvedev3", "Medvedev4", "Medvedev5"])
-        let friend5 = Friend(name: "Дональд Трамп", avatar: "Trump", fotoArray: ["Trump1", "Trump2", "Trump3", "Trump4", "Trump5"])
+        let friend5 = Friend(name: "Дональд Трамп", avatar: "Tramp", fotoArray: ["Tramp1", "Tramp2", "Tramp3", "Tramp4", "Tramp5"])
                                                                                   
                                                                                   
         friendsArray.append(friend1)

@@ -85,7 +85,7 @@ extension AllGroupsViewController: UITableViewDataSource, UITableViewDelegate{
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(sourceArray[indexPath.row].name)
+//        print(sourceArray[indexPath.row].name)
         NotificationCenter.default.post(name: NSNotification.Name("groupSelectedNotification"), object: sourceArray[indexPath.row])
     }
 }
