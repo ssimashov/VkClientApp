@@ -9,10 +9,12 @@ import UIKit
 
 class FriendsViewController: UIViewController {
 
-    @IBOutlet weak var tableview: UITableView!
+
+    @IBOutlet weak var tableView: UITableView!
     
-   
+    @IBOutlet weak var searchBar: UISearchBar!
     
+    var sourceArray = [Friend]()
     var friendsArray = [Friend]()
     
     let customCellReuseIdentifier = "customCellReuseIdentifier"
@@ -23,13 +25,14 @@ class FriendsViewController: UIViewController {
         super.viewDidLoad()
         
         
-        tableview.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: customCellReuseIdentifier)
-        tableview.dataSource = self
-        tableview.delegate = self
+        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: customCellReuseIdentifier)
+        tableView.dataSource = self
+        tableView.delegate = self
         
         fillFriendsArray()
+        friendsArray = sourceArray
+        searchBar.delegate = self
     
-        
     }
     
 }
@@ -43,11 +46,11 @@ extension FriendsViewController: UITableViewDataSource {
         let friend4 = Friend(name: "Дмитрий Медведев", avatar: "Medvedev", fotoArray: ["Medvedev1", "Medvedev2", "Medvedev3", "Medvedev4", "Medvedev5"])
         let friend5 = Friend(name: "Дональд Трамп", avatar: "Tramp", fotoArray: ["Tramp1", "Tramp2", "Tramp3", "Tramp4", "Tramp5"])
           
-        friendsArray.append(friend1)
-        friendsArray.append(friend2)
-        friendsArray.append(friend3)
-        friendsArray.append(friend4)
-        friendsArray.append(friend5)
+        sourceArray.append(friend1)
+        sourceArray.append(friend2)
+        sourceArray.append(friend3)
+        sourceArray.append(friend4)
+        sourceArray.append(friend5)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -90,4 +93,18 @@ extension FriendsViewController: UITableViewDelegate {
         }
     }
     
+}
+
+extension FriendsViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            friendsArray = sourceArray
+        }
+        else {
+            friendsArray = sourceArray.filter({ friendItem in
+                friendItem.name.contains(searchText)
+            })
+        }
+        tableView.reloadData()
+    }
 }

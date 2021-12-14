@@ -199,22 +199,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qPr-eW-avU">
-                                <rect key="frame" x="0.0" y="56" width="414" height="757"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="696"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="HVX-wP-QD2">
+                                <rect key="frame" x="0.0" y="56" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="07m-qO-HuM"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
                             <constraint firstItem="07m-qO-HuM" firstAttribute="bottom" secondItem="qPr-eW-avU" secondAttribute="bottom" id="3DQ-RO-DjH"/>
+                            <constraint firstItem="qPr-eW-avU" firstAttribute="top" secondItem="HVX-wP-QD2" secondAttribute="bottom" constant="10" id="B6N-Ml-IJE"/>
+                            <constraint firstItem="HVX-wP-QD2" firstAttribute="trailing" secondItem="07m-qO-HuM" secondAttribute="trailing" id="BZY-ey-sWW"/>
+                            <constraint firstItem="HVX-wP-QD2" firstAttribute="top" secondItem="07m-qO-HuM" secondAttribute="top" id="F32-nl-o9R"/>
+                            <constraint firstItem="HVX-wP-QD2" firstAttribute="leading" secondItem="07m-qO-HuM" secondAttribute="leading" id="T51-SL-FNV"/>
                             <constraint firstItem="07m-qO-HuM" firstAttribute="trailing" secondItem="qPr-eW-avU" secondAttribute="trailing" id="VIl-zi-0hf"/>
-                            <constraint firstItem="qPr-eW-avU" firstAttribute="top" secondItem="07m-qO-HuM" secondAttribute="top" id="Yfk-Ea-QpO"/>
+                            <constraint firstAttribute="trailing" secondItem="HVX-wP-QD2" secondAttribute="trailing" id="aEc-yU-VLU"/>
                             <constraint firstItem="qPr-eW-avU" firstAttribute="leading" secondItem="07m-qO-HuM" secondAttribute="leading" id="yf4-jh-BuK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Friends" id="3UF-AX-QVF"/>
                     <connections>
-                        <outlet property="tableview" destination="qPr-eW-avU" id="NWg-pu-31H"/>
+                        <outlet property="searchBar" destination="HVX-wP-QD2" id="WBM-HJ-Tre"/>
+                        <outlet property="tableView" destination="qPr-eW-avU" id="Z6d-CR-ayS"/>
                         <segue destination="Ek3-7J-dfZ" kind="show" identifier="toCollectionViewSegue" id="Azf-lU-Xn8"/>
                     </connections>
                 </viewController>
