@@ -67,15 +67,57 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZrB-Zc-510">
+                                                <rect key="frame" x="120" y="544" width="40" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="PTv-oq-YZA"/>
+                                                    <constraint firstAttribute="height" constant="40" id="ug5-WP-2aM"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ss-iL-Off">
+                                                <rect key="frame" x="180" y="544" width="40" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="G1d-PT-rVV"/>
+                                                    <constraint firstAttribute="height" constant="40" id="bxv-4b-Ky4"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYV-N2-jSa">
+                                                <rect key="frame" x="240" y="544" width="40" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="CeW-4i-9AS"/>
+                                                    <constraint firstAttribute="width" constant="40" id="iIl-5D-bIe"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="YBR-Mw-y7J" firstAttribute="leading" secondItem="0XS-rK-Le2" secondAttribute="leading" id="39t-JE-Pwl"/>
+                                            <constraint firstItem="EYV-N2-jSa" firstAttribute="top" secondItem="mia-SH-uf8" secondAttribute="bottom" constant="80" id="6wd-qU-3NX"/>
                                             <constraint firstItem="0XS-rK-Le2" firstAttribute="leading" secondItem="knO-qo-Fnw" secondAttribute="leading" id="8ne-n0-l8l"/>
                                             <constraint firstItem="0XS-rK-Le2" firstAttribute="leading" secondItem="2PC-xj-Hps" secondAttribute="leading" constant="20" id="Azu-1c-Gh6"/>
                                             <constraint firstItem="dY7-7M-ikT" firstAttribute="centerX" secondItem="2PC-xj-Hps" secondAttribute="centerX" id="BPy-gk-1Zm"/>
                                             <constraint firstItem="mia-SH-uf8" firstAttribute="top" secondItem="knO-qo-Fnw" secondAttribute="bottom" constant="70" id="DZ2-Qn-MbK"/>
                                             <constraint firstItem="knO-qo-Fnw" firstAttribute="top" secondItem="Uhh-re-DMF" secondAttribute="bottom" constant="20" id="Dcv-4b-m3y"/>
+                                            <constraint firstItem="ZrB-Zc-510" firstAttribute="leading" secondItem="2PC-xj-Hps" secondAttribute="leading" constant="120" id="IQu-zS-deM"/>
+                                            <constraint firstItem="ZrB-Zc-510" firstAttribute="top" secondItem="mia-SH-uf8" secondAttribute="bottom" constant="80" id="K2Q-e3-YwH"/>
                                             <constraint firstItem="0XS-rK-Le2" firstAttribute="top" secondItem="dY7-7M-ikT" secondAttribute="bottom" constant="60" id="OO5-Y7-a65"/>
                                             <constraint firstAttribute="bottom" secondItem="mia-SH-uf8" secondAttribute="bottom" constant="338" id="R8z-aW-JAL"/>
                                             <constraint firstItem="YBR-Mw-y7J" firstAttribute="top" secondItem="0XS-rK-Le2" secondAttribute="bottom" constant="20" id="RFH-gv-LAk"/>
@@ -83,10 +125,13 @@
                                             <constraint firstAttribute="trailing" secondItem="0XS-rK-Le2" secondAttribute="trailing" constant="20" id="SlQ-aC-zib"/>
                                             <constraint firstItem="0XS-rK-Le2" firstAttribute="leading" secondItem="Uhh-re-DMF" secondAttribute="leading" id="TTx-T8-AQM"/>
                                             <constraint firstItem="Uhh-re-DMF" firstAttribute="top" secondItem="YBR-Mw-y7J" secondAttribute="bottom" constant="40" id="VKX-l9-RTH"/>
+                                            <constraint firstItem="EYV-N2-jSa" firstAttribute="leading" secondItem="4ss-iL-Off" secondAttribute="trailing" constant="20" id="VW1-2l-HOk"/>
                                             <constraint firstItem="Uhh-re-DMF" firstAttribute="trailing" secondItem="0XS-rK-Le2" secondAttribute="trailing" id="WF2-FD-KZE"/>
                                             <constraint firstItem="dY7-7M-ikT" firstAttribute="top" secondItem="2PC-xj-Hps" secondAttribute="top" constant="29" id="YFu-0L-UWB"/>
                                             <constraint firstItem="YBR-Mw-y7J" firstAttribute="trailing" secondItem="0XS-rK-Le2" secondAttribute="trailing" id="ilz-eT-Bwc"/>
+                                            <constraint firstItem="4ss-iL-Off" firstAttribute="top" secondItem="mia-SH-uf8" secondAttribute="bottom" constant="80" id="j3x-lM-psN"/>
                                             <constraint firstItem="mia-SH-uf8" firstAttribute="centerX" secondItem="2PC-xj-Hps" secondAttribute="centerX" id="jWr-9x-g0N"/>
+                                            <constraint firstItem="4ss-iL-Off" firstAttribute="leading" secondItem="ZrB-Zc-510" secondAttribute="trailing" constant="20" id="ntg-h5-7Wu"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -109,12 +154,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="firstRoundView" destination="ZrB-Zc-510" id="KML-fJ-R0C"/>
                         <outlet property="imageView" destination="dY7-7M-ikT" id="lwt-FK-VIc"/>
                         <outlet property="loginLabel" destination="0XS-rK-Le2" id="1KP-8y-3HF"/>
                         <outlet property="loginTextField" destination="YBR-Mw-y7J" id="cgu-ff-WkF"/>
                         <outlet property="passwordLabel" destination="Uhh-re-DMF" id="ESA-pB-VQe"/>
                         <outlet property="passwordTextField" destination="knO-qo-Fnw" id="IyI-j5-ArK"/>
                         <outlet property="scrollView" destination="95U-Jm-ME3" id="KBv-Vn-CEV"/>
+                        <outlet property="secondRoundView" destination="4ss-iL-Off" id="YE2-DY-7rZ"/>
+                        <outlet property="thirdRoundView" destination="EYV-N2-jSa" id="dXR-qu-Yb3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -393,6 +441,9 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -16,9 +16,36 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
-    
+    @IBOutlet weak var firstRoundView: UIView!
+    @IBOutlet weak var secondRoundView: UIView!
+    @IBOutlet weak var thirdRoundView: UIView!
+   
     let toOrangeSegue = "toTabBarController"
     
+    func dotsAnimate(exitAfter: Int, currentCount: Int){
+        let timeInterval: CGFloat = 1
+        UIView.animate(withDuration: timeInterval) {[weak self] in
+            self?.firstRoundView.alpha = 0
+            self?.secondRoundView.alpha = 1
+        } completion: { _ in
+            UIView.animate(withDuration: timeInterval) {[weak self] in
+                self?.secondRoundView.alpha = 0
+                self?.thirdRoundView.alpha = 1
+            } completion: { _ in
+                UIView.animate(withDuration: timeInterval) {[weak self] in
+                    self?.thirdRoundView.alpha = 0
+                    self?.firstRoundView.alpha = 1
+                } completion: {[weak self] _ in
+                    if currentCount < exitAfter {
+                        self?.dotsAnimate(exitAfter: exitAfter, currentCount: currentCount + 1)
+                    }
+                    else {
+                        self?.firstRoundView.alpha = 0
+                    }
+                }
+            }
+        }
+    }
     
     
     func animating(){
@@ -40,6 +67,9 @@ class LoginViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        secondRoundView.alpha = 0
+        thirdRoundView.alpha = 0
+        dotsAnimate(exitAfter: 5, currentCount: 0)
         UIView.transition(with: imageView, duration: 3, options: .transitionFlipFromTop,
                           animations: {[weak self] in
             guard let self = self else {return}
