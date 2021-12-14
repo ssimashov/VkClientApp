@@ -13,8 +13,40 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var loginLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
     
     let toOrangeSegue = "toTabBarController"
+    
+    
+    
+    func animating(){
+        UIView.animate(withDuration: 4) {
+            self.loginTextField.transform = .identity
+            self.passwordTextField.transform = .identity
+            self.loginLabel.transform = .identity
+            self.passwordLabel.transform = .identity
+        }
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loginTextField.transform = CGAffineTransform(translationX: -(self.view.frame.width), y: 0)
+       passwordTextField.transform = CGAffineTransform(translationX: -(self.view.frame.width), y: 0)
+        loginLabel.transform = CGAffineTransform(translationX: (self.view.frame.width), y: 0)
+        passwordLabel.transform = CGAffineTransform(translationX: (self.view.frame.width), y: 0)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.transition(with: imageView, duration: 3, options: .transitionFlipFromTop,
+                          animations: {[weak self] in
+            guard let self = self else {return}
+            self.imageView.bounds = .zero
+        }, completion: nil)
+        animating()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

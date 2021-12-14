@@ -4,7 +4,6 @@
 //
 //  Created by Sergey Simashov on 06.12.2021.
 
-
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {

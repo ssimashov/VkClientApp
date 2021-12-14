@@ -62,7 +62,7 @@ class AllGroupsViewController: UIViewController {
 
 }
 
-extension AllGroupsViewController: UITableViewDataSource, UITableViewDelegate{
+extension AllGroupsViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -82,10 +82,14 @@ extension AllGroupsViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return heightCustomTableViewCell
     }
-    
-    
+}
+
+    extension AllGroupsViewController: UITableViewDelegate {
+        
+  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        print(sourceArray[indexPath.row].name)
-        NotificationCenter.default.post(name: NSNotification.Name("groupSelectedNotification"), object: sourceArray[indexPath.row])
+//        NotificationCenter.default.post(name: NSNotification.Name("groupSelectedNotification"), object: sourceArray[indexPath.row])
     }
 }
+

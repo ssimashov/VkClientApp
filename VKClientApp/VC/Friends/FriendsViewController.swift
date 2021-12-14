@@ -34,7 +34,7 @@ class FriendsViewController: UIViewController {
     
 }
 
-extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
+extension FriendsViewController: UITableViewDataSource {
     
     func fillFriendsArray() {
         let friend1 = Friend(name: "Владимир Путин", avatar: "Putin", fotoArray: ["Putin1", "Putin2", "Putin3", "Putin4", "Putin5"])
@@ -42,8 +42,7 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
         let friend3 = Friend(name: "Владимир Жириновский", avatar: "Zhirik", fotoArray: ["Zhirik1", "Zhirik2", "Zhirik3", "Zhirik4", "Zhirik5"])
         let friend4 = Friend(name: "Дмитрий Медведев", avatar: "Medvedev", fotoArray: ["Medvedev1", "Medvedev2", "Medvedev3", "Medvedev4", "Medvedev5"])
         let friend5 = Friend(name: "Дональд Трамп", avatar: "Tramp", fotoArray: ["Tramp1", "Tramp2", "Tramp3", "Tramp4", "Tramp5"])
-                                                                                  
-                                                                                  
+          
         friendsArray.append(friend1)
         friendsArray.append(friend2)
         friendsArray.append(friend3)
@@ -51,8 +50,6 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
         friendsArray.append(friend5)
     }
     
-
-
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -72,6 +69,11 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
         return heightCustomTableViewCell
     }
     
+    
+}
+
+extension FriendsViewController: UITableViewDelegate {
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == toGallerySegue,
            let friendsFotoArray = sender as? [String],
@@ -87,4 +89,5 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
             performSegue(withIdentifier: toGallerySegue, sender: friendsFotoArray)
         }
     }
+    
 }
