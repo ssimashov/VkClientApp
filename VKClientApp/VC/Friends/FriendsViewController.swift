@@ -102,7 +102,7 @@ extension FriendsViewController: UISearchBarDelegate {
         }
         else {
             friendsArray = sourceArray.filter({ friendItem in
-                friendItem.name.contains(searchText)
+                friendItem.name.lowercased().contains(searchText.lowercased())
             })
         }
         tableView.reloadData()
