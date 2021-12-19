@@ -305,7 +305,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <segue destination="FDP-vZ-kBg" kind="show" identifier="moveToPhoto" id="sQ6-8o-v3u"/>
+                                            <segue destination="FDP-vZ-kBg" kind="show" identifier="moveToPhoto" customClass="CustomMoveToPhotoSegue" customModule="VKClientApp" customModuleProvider="target" id="sQ6-8o-v3u"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

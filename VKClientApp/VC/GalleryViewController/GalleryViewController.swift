@@ -23,6 +23,7 @@ class GalleryViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        
     }
 
 
@@ -41,6 +42,7 @@ extension GalleryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CustomCollectionViewCell
         cell.configure(image: UIImage(named: sourceArray[indexPath.item]), index: indexPath.item)
+        
         return cell
     }
     

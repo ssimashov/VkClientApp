@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6137B23276FB445002ED134 /* CustomMoveToPhotoSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6137B22276FB445002ED134 /* CustomMoveToPhotoSegue.swift */; };
 		F61AE2B9274D5C4B00F496FA /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61AE2B8274D5C4B00F496FA /* Friend.swift */; };
 		F61AE2BB274D5C5800F496FA /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61AE2BA274D5C5800F496FA /* Group.swift */; };
 		F61AE2C1274D671D00F496FA /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61AE2C0274D671D00F496FA /* FriendsViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F6137B22276FB445002ED134 /* CustomMoveToPhotoSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMoveToPhotoSegue.swift; sourceTree = "<group>"; };
 		F61AE2B8274D5C4B00F496FA /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		F61AE2BA274D5C5800F496FA /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		F61AE2C0274D671D00F496FA /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F6137B21276FB421002ED134 /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+				F6137B22276FB445002ED134 /* CustomMoveToPhotoSegue.swift */,
+			);
+			path = Segue;
+			sourceTree = "<group>";
+		};
 		F61AE2CA274E9BFF00F496FA /* AllGroups */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 		F6334D62274D597D00EE301D /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				F6137B21276FB421002ED134 /* Segue */,
 				F64F8689276685DE0068CF89 /* LikeControl */,
 				F64F8682275F93B00068CF89 /* PhotoViewController */,
 				F6E52E662757EA3C0026D7AD /* GalleryViewController */,
@@ -264,6 +275,7 @@
 				F61AE2CC274E9C2200F496FA /* AllGroupsViewController.swift in Sources */,
 				F64F868B276686180068CF89 /* LikeControlView.swift in Sources */,
 				F6F924C4273FF7D100D674F8 /* LoginViewController.swift in Sources */,
+				F6137B23276FB445002ED134 /* CustomMoveToPhotoSegue.swift in Sources */,
 				F6F924B0273EE4C000D674F8 /* AppDelegate.swift in Sources */,
 				F61AE2BB274D5C5800F496FA /* Group.swift in Sources */,
 				F64F8684275F93ED0068CF89 /* PhotoViewController.swift in Sources */,
